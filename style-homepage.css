@@ -1,0 +1,277 @@
+
+button {
+    font-family: 'Mulish', sans-serif;
+}
+
+/* PAGE D'ACCUEIL */
+
+/* Style des h2 */
+.homepage-title {
+    font-size: 28px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.homepage-container {
+    padding: 0px 60px;
+    margin: 131px 0 0 0;
+}
+
+.text-arrow {
+    font-size: clamp(20px, 2vw, 28px);
+    text-align: end;
+    font-weight: 700;
+    gap: 15px;
+}
+
+
+/* HOMME - FEMME */
+.container-homme-femme {
+    gap: 60px;
+    height: 80vh;
+    margin-top: 75px;
+}
+
+.carre-femme, .carre-homme {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+}
+
+.carre-homme {
+    background-image: url("img/models/willow-kaii-unsplash.jpg");
+    background-position: auto -20px;
+}
+.carre-femme {
+    background-image: url("img/models/michal-binkiewicz-unsplash.jpg");
+    background-position: auto -50px;
+}
+
+.carre-femme .text-arrow, .carre-homme .text-arrow {
+    position: absolute;
+    bottom: 35px;
+    right: 80px;
+}
+
+/* NOUVEAUTÉ */
+
+.grid-nouveaute {
+    display: grid;
+    gap: 60px;
+    height: 60vh;
+}
+.pull, .tshirt, .jeans, .promotion {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+}
+
+.pull {
+    background-image: url("img/fabrics/pexels-vlada-karpovich-5603009.jpg");
+    background-position: auto -200px;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.tshirt {
+    background-image: url("img/fabrics/keagan-henman-Won79_9oUEk-unsplash.jpg");
+    background-position: center;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.jeans {
+    background-image: url("img/fabrics/maude-frederique-lavoie-EDSTj4kCUcw-unsplash.jpg");
+    background-position: auto 10px;
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+
+.promotion {
+    background-color: #F4F4F4;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.pull .text-arrow, .tshirt .text-arrow, .jeans .text-arrow, .promotion .text-arrow {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.pull .text-arrow, .tshirt .text-arrow, .jeans .text-arrow {
+    color: var(--color-white);
+    fill: var(--color-white);
+}
+
+
+.promotion p {
+    font-size: clamp(20px, 3vw, 28px);
+    text-align: end;
+    position: absolute;
+    bottom: 75px;
+    right: 30px;
+    padding-left: 40px;
+}
+
+.homepage-30-promotion {
+    font-size: 35px;
+}
+
+/* MEILLEURES VENTES */
+
+.homepage-button {
+    border: solid var(--color-black 1px);
+    padding: 5px 35px;
+    font-size: 28px;
+    cursor: pointer;
+}
+.tri-btn {
+    gap: 35px;
+}
+
+.black-btn {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+.white-btn {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+.white-btn:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+.black-btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+/* Carousel */
+.carousel-meilleures-ventes {
+    margin-top: 39px;
+    justify-content: center;
+    gap: 38px;
+}
+
+.carousel-meilleures-ventes ul {
+    gap: 60px;
+}
+
+.carousel-meilleures-ventes-clothe-slide {
+    list-style-type: none;
+}
+.carousel-meilleures-ventes-clothe-slide img {
+    height: 364px;
+    width: 428px;
+    object-fit: cover;
+}
+
+/* NOS ENGAGEMENTS */
+
+.engagements-txt {
+    background-color: #F4F4F4;
+    text-align: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+}
+
+.engagements-txt p {
+    width: 30vw;
+}
+
+.container-engagements img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/********* MEDIA QUERIES ***********/
+
+@media (max-width: 850px) {
+
+    .homepage-title {
+        margin-bottom: 25px;
+    }
+
+    .display-none-mobile {
+        display: none;
+    }
+
+    .homepage-container {
+        padding: 0px 25px;
+        margin: 50px 0 0 0;
+    }
+    
+    /* HOMME / FEMME */
+    .container-homme-femme {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .carre-femme, .carre-homme {
+        width: 100%;
+        background-position: center;
+    }
+    .carre-femme .text-arrow, .carre-homme .text-arrow {
+        position: absolute;
+        bottom: 22px;
+        right: 15px;
+    }
+
+    /* NOUVEAUTÉ */
+
+    .grid-nouveaute {
+        gap: 20px;
+        height: 100vh;
+    }
+    .pull {
+        grid-column: 1 / span 1;
+        grid-row: 1;
+    }
+    .tshirt {
+        grid-column: 2 / span 1;
+        grid-row: 1;
+    }
+    .jeans {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    .promotion {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        min-height: 100px;
+    }
+    .promotion p {
+        font-size: 50;
+    }
+    .homepage-30-promotion {
+        font-size: 55px;
+    }
+
+    /* MEILLEURES VENTES */
+    .tri-btn {
+        justify-content: center;
+    }
+
+    /* NOS ENGAGEMENTS */
+
+    .container-engagements:nth-of-type(4) {
+        width: 100vw;
+        padding: 0px 0px;
+    }
+
+    .engagements-txt p {
+        width: 80vw;
+        text-align: left;
+    }
+
+
+    
+
+}

@@ -1,0 +1,228 @@
+.column {
+    flex-direction: column;
+}
+
+/* STYLE DU PANIER */
+
+.basket {
+    padding: 0px 60px;
+    margin: 20px 0 0 0;
+}
+
+.basket-title {
+    font-weight: 700;
+    font-size: clamp(30px, 3vw, 45px);
+    margin-bottom: 45px;
+}
+
+.basket-container {
+    gap: 60px;
+}
+
+
+/* GAUCHE - LISTE DES ARTICLES */
+.articles-list {
+    gap: 32px;
+    width: 75vw;
+    min-width: 450px;
+    flex-direction: column;
+}
+
+/* Hauteur des articles */
+.basket-desc-article, .basket-article-item-right, .basket-miniature-article {
+    height: 177px;
+}
+
+.basket-article-item {
+    justify-content: space-between;
+    width: 100%;
+}
+.basket-desc-article {
+    align-items: flex-start;
+}
+
+.basket-article-item-right {
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.basket-article-item-left {
+    gap: 60px;
+}
+
+
+/* Description article */
+.basket-article-name {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: clamp(18px, 3vw, 20px);
+}
+.basket-article-description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.basket-price {
+    font-weight: 700;
+    font-size: clamp(18px, 3vw, 22px);
+}
+
+/* Prix quantité article */
+.decrease-items, .increase-items {
+    height: 40px;
+    width: 40px;
+    font-weight: 500;
+    font-size: 22px;
+    border: none;
+    background-color: #F4F4F4;
+}
+.number-articles p {
+    padding: 10px 11px;
+    background-color: #C8C8C8;
+}
+
+.basket-little-title {
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 35px;
+    align-self: flex-start;
+}
+
+
+/* DROITE - FACTURATION */
+
+/* Disposition des éléments */
+.right-side-order {
+    width: 30vw;
+}
+.basket-total-facturation, .basket-delivery-info, .basket-paiements-infos, .basket-promotion-infos {
+    gap: 20px;
+}
+.basket-delivery-info, .basket-paiements-infos, .basket-promotion-infos {
+    align-items: flex-start;
+}
+.basket-subtotal, .basket-delivery-total, .basket-total {
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Facturation */
+.divider-total-facturation {
+    /* Barre horizontale */
+    width: 80%;
+}
+
+/* Bouton commander */
+.basket-order-btn {
+    background-color: var(--color-black);
+    padding: 16px 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: clamp(18px, 3vw, 25px);
+    color: var(--color-white);
+    border: none;
+}
+
+/* moyens de paiement */
+.paiement-possibilities {
+    list-style-type: none;
+}
+.paiement-possibilities li {
+    background-color: #C8C8C8;
+    width: 50px;
+    height: 30px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Code promotion */
+
+.input-code-promo {
+    background-color: #C8C8C8;
+    border: none;
+    min-width: 180px;
+    height: 33px;
+    padding-left: 5px;
+}
+
+.btn-code-promo {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    width: 50px;
+    height: 33px;
+    margin-left: -5px;
+}
+
+/* infos legales */
+.legal-infos {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #C8C8C8;
+}
+.legal-infos a {
+    color: #C8C8C8;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 850px) {
+
+    .basket-container {
+        gap: 30px;
+    }
+
+    .basket {
+        padding: 0px 25px;
+    }
+
+    .basket-container {
+        flex-direction: column;
+    }
+
+    /* élargir les deux parties */
+    .articles-list {
+        width: 100%;
+    }
+    .right-side-order {
+        width: 100%;
+    }
+
+    .basket-miniature-article {
+        height: 150px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .basket-article-item-left {
+        gap: 10px;
+    }
+
+    .articles-list {
+        align-items: center;
+        min-width: 0px;
+        gap: 50px;
+    }
+
+    .basket-article-description {
+        font-size: 13px;
+    }
+
+    /* Hauteur des articles */
+    .basket-desc-article, .basket-article-item-right, .basket-miniature-article {
+        height: 100px;
+    }
+
+    /* Ajouter/retirer un article */
+    .decrease-items, .increase-items {
+        height: 30px;
+        width: 30px;
+    }
+    .number-articles p {
+        padding: 5px;
+    }
+
+}

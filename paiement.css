@@ -1,0 +1,450 @@
+/* BARRE DE NAVIGATION */
+.top-nav {
+  background-color: rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  justify-content: space-between;
+  height: 78px;
+  padding: 0px 60px;
+}
+
+.nav-right,
+.nav-left {
+  gap: 20px;
+}
+
+.top-nav a {
+  font-weight: 400;
+  font-size: clamp(12.5px, 1vw, 14px);
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Cacher les icônes qui n'apparaissent qu'en version mobile */
+.burger-icon,
+.search-icon,
+.heart-wishlist-icon,
+.profile-icon,
+.basket-icon {
+  display: none;
+}
+
+/* MENU BURGER */
+.menu > a {
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: var(--color-black);
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  /* Animation du burger */
+  transition: transform 900ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgb(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+/* FONTS */
+/* Mulish */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* VARIABLES */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+/* GENERAL  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font-family: "Mulish", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+header {
+  position: sticky;
+  top: 0;
+}
+/* FONT  */
+h1 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(16px, 3vw, 43px);
+}
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 39px 0;
+}
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+h4 {
+  font-size: 34px;
+}
+p {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+hr {
+  margin: 10px 0;
+  width: 100%;
+}
+.little {
+  font-size: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.medium {
+  font-size: 15px;
+}
+.special {
+  font-size: 13px;
+  color: #808080;
+}
+.infos-container,
+.bloc {
+  border: 2px solid black;
+}
+/* DISPLAY FLEX  */
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.flexboxspacebetween {
+  display: flex;
+  justify-content: space-between;
+}
+.parent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+/* MARGES  */
+.bottom-margin {
+  margin-bottom: 25px;
+}
+.label {
+  margin: 0 10px;
+}
+.margin {
+  min-height: 156px;
+  width: 561px;
+  align-items: flex-start;
+  margin: 0 166px 39px;
+  padding: 25px;
+}
+main form {
+    border: 1px solid black;
+    font-size: 13px;
+    text-align: center;
+    width: 146px;
+    height: 34px;
+}
+.center {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+  cursor: pointer;
+}
+.bloc {
+    width: 423px;
+    padding: 25px;
+    align-items: flex-start;
+}
+.valider {
+    width: 362px;
+    height: 63px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+.livraison {
+    width: 366px;
+    height: 40px;
+    background: #d9d9d9;
+    border: none;
+    font-size: 18px;
+}
+.classewidth {
+    justify-content: space-between;
+    width: 100%;
+}
+.CVC,
+label,
+.special {
+    margin: 0 auto;
+}
+.special {
+    text-align: center;
+}
+.modepaiement {
+    width: 100%;
+}
+
+.center {
+  margin: 0 auto;
+  cursor: pointer;
+}
+/* FOOTER */
+
+/* Logo */
+.footer-brand-name {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 3vw, 60px);
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  justify-content: center;
+  width: 30vw;
+}
+
+/* Disposition grid */
+.footer-wrapper {
+  display: grid;
+  gap: 30px;
+  padding: 80px 60px 50px;
+}
+
+/* Newsletter */
+.newsletter-form {
+  grid-column: 2;
+  grid-row: 1 / span 1;
+  width: 100%;
+}
+.newsletter-btn {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 6px 14px;
+  border: none;
+  font-size: 16px;
+  display: inline;
+  cursor: pointer;
+}
+.input-newsletter {
+  border: none;
+  border-bottom: solid var(--color-black) 1px;
+  width: 180px;
+  height: 25px;
+}
+.input-newsletter::placeholder {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.input-newsletter:focus {
+  outline: none;
+}
+
+/* Boutons réseaux sociaux */
+.social-btn {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.social-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 50px;
+  height: 50px;
+}
+
+.social-btn a:hover {
+  fill: red;
+}
+
+/* Pages footer */
+.footer-page-list {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+.footer-legal-pages {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+}
+.footer-page-list,
+.footer-legal-pages {
+  gap: 15px;
+  justify-content: center;
+}
+.footer-legal-pages a {
+  font-size: clamp(9px, 3vw, 16px);
+}
+.footer-plus {
+  font-size: 20px;
+  color: gray;
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .burger-icon,
+  .search-icon,
+  .heart-wishlist-icon,
+  .profile-icon,
+  .basket-icon {
+    display: block;
+  }
+  .top-nav-text {
+    display: none;
+  }
+
+  .top-nav {
+    height: 60px;
+    padding: 0px 10px;
+  }
+
+  .nav-left {
+    gap: 0;
+  }
+
+  /* NAVBAR - BURGER */
+  .menu-button-container {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0;
+    font-size: 20px;
+  }
+
+  #menu-toggle ~ .menu a {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menu-toggle:checked ~ .menu a {
+    height: 3em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menu > a {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255);
+  }
+
+  .menu > a:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+
+  /* FOOTER */
+
+  .footer-wrapper {
+    padding: 50px 25px 35px;
+  }
+
+  .footer-brand-name {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: flex-start;
+  }
+
+  .newsletter-form {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+  }
+  .social-btn {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .footer-page-list {
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footer-legal-pages {
+    grid-column: 1;
+    grid-row: 5;
+    gap: 2px;
+    flex-wrap: wrap;
+  }
+
+  .footer-separation {
+    display: none;
+  }
+  .footer-plus {
+    display: inline;
+  }
+}

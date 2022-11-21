@@ -1,0 +1,106 @@
+#categorie_femme {
+    padding: 0 60px;
+}
+
+#categorie_femme h3 {
+    color: white;
+}
+
+/* MARGIN between div */
+.margin_btw_div {
+    margin: 100px auto;
+}
+
+/* Background image parametres */
+.bg-img_param {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* POLYESTER RECYCLÉ */
+.polyester_recycle {
+    height: 460px;
+    background-image: url(images/polyester_recycle.jpeg);
+}
+
+/* VTMTS HIVER */
+.vetements_hiver {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px
+}
+
+.vtmts_hiver_dim {
+    width: min(630px, 100%);
+    height: 430px;
+}
+
+.vtmts_soiree {
+    background-image: url(images/vetements_de_fete.jpeg);
+}
+
+.vtmts_chauds {
+    background-image: url(images/vetements_chaud.jpeg);
+}
+
+/* COTON BIO */
+.coton_bio {
+    background-image: url(images/coton_bio.jpeg);
+    height: 430px;
+}
+
+.categories_type_insta {
+    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+
+}
+
+.categories_type_insta div {
+    height: 430px;
+}
+
+.tops {
+    background-image: url(images/tops.jpeg);
+}
+
+.bas {
+    background-image: url(images/bas.jpeg);
+}
+
+.robes {
+    background-image: url(images/robes.jpeg);
+}
+
+.vestes {
+    background-image: url(images/vestes.jpeg);
+}
+
+.manteaux {
+    background-image: url(images/manteaux.jpeg);
+}
+
+.tout {
+    background-image: url(images/tout.jpeg);
+}
+
+@media (max-width: 870px) {
+
+    #categorie_femme {
+        padding: 0 25px;
+    }
+
+    .margin_btw_div {
+        margin: 60px auto;
+    }
+
+    .vetements_hiver {
+        flex-direction: column;
+    }
+
+}

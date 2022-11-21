@@ -1,0 +1,142 @@
+/* GENERAL  */
+  .description-produit {
+    width: min(1578px, 100%);
+    margin: 20px auto 100px;
+  }
+  :root {
+    --color-red: #cf3034;
+  }
+  .flexboxspacebetween {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+
+/* FONT SIZE  */
+h2 {
+    font-size: clamp(12px, 3vw, 20px);
+    font-weight: bold;
+    line-height: 50px;
+}
+.voiraussi {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 52px 61px;
+}
+p {
+    font-size: clamp(12px, 3vw, 20px) ;
+}
+.size30bold {
+    font-size: clamp(12px, 3vw, 30px);
+    font-weight: bold;
+}
+.size16px {
+    font-size: 16px;
+}
+.descproduit {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    display: block;
+}
+.descproduit img {
+    width: 250px;
+}
+
+/* MARGIN CLASSES  */
+.top-margin {
+    margin-top: 15px;
+}
+.bottom-margin {
+    margin-bottom: 25px;
+}
+.bottomAndtop {
+    margin: 15px 0 25px;
+}
+
+ /* ACCUEIL */
+ .accueil-image  {
+    min-height: 420px;
+    max-width: 780px;
+}
+ .accueil-image img {
+	width: 100%;
+    object-fit: cover;
+
+}
+.texte {
+    max-width: 517px;;
+    text-align: left;
+}
+
+.avis {
+    text-decoration: underline;
+    font-size: clamp(10px, 3vw, 20px);  
+    cursor: pointer; 
+}
+.svgXavis {
+    justify-content: space-between;
+}
+.texte .panier {
+    display: block;
+    background: var(--color-black);
+    min-width: 519px;
+    min-height: 50px;
+    font-size: 18px;
+}
+.color-clothes {
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.texte .panier a {
+    color: white;
+}
+.texte button a:hover {
+opacity: 0.6;
+}
+
+.line0 {
+    line-height: normal;
+}
+.echelledetaille {
+margin: 0;
+width: 150%;
+}
+/* SECTION VITRINE  */
+.vitrine-images {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.same-height-columns {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 33px 61px; 
+}
+.same-height-columns__column {
+    display: flex;
+    flex-direction: column;
+}
+/* HOVER  */
+.avis:hover,
+.descproduit:hover,
+.size16px:hover,
+.color-clothes:hover,
+.logos-size a:hover,
+.same-height-columns__content a:hover
+ {
+    opacity: 0.5;
+}
+
+
+    
+/* RESPONSIVE THOMAS  */
+
+    
+
+
+    
