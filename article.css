@@ -1,6 +1,6 @@
 /* GENERAL  */
   .description-produit {
-    width: min(1578px, 100%);
+    width: min(1200px, 100%);
     margin: 20px auto 100px;
   }
   :root {

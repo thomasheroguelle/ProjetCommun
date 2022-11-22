@@ -9,6 +9,7 @@
 :root {
 	--color-black: #000000;
     --color-white: #FFFFFF;
+    --color-red: red;
 }
 
 * {
@@ -46,6 +47,7 @@ a {
 header {
     position: sticky;
 	top: 0;
+    z-index: 5;
 }
 
 .flex {
@@ -55,6 +57,10 @@ header {
 
 
 /* BARRE DE NAVIGATION */
+.logo-red-dot {
+    color: var(--color-red);
+}
+
 .top-nav {
     background-color: rgb(255, 255, 255, 0.5);
     backdrop-filter: blur(6px);
@@ -73,12 +79,15 @@ header {
 }
 
 .top-nav a:hover {
-    text-decoration: underline;
+    color: var(--color-red);
 }
 
 /* Cacher les icônes qui n'apparaissent qu'en version mobile */
 .burger-icon, .search-icon, .heart-wishlist-icon, .profile-icon, .basket-icon {
     display: none;
+}
+.heart-wishlist-icon {
+    fill: #101820;
 }
 
 /* MENU BURGER */
@@ -150,6 +159,9 @@ header {
     justify-content: center;
     width: 30vw;
 }
+.footer-brand-name:hover {
+    color: red;
+}
 
 /* Disposition grid */
 .footer-wrapper {
@@ -173,6 +185,10 @@ header {
     display: inline;
     cursor: pointer;
 }
+.newsletter-btn:hover {
+    background-color: var(--color-red);
+}
+
 .input-newsletter {
     border: none;
     border-bottom: solid var(--color-black) 1px;
@@ -206,7 +222,7 @@ header {
 }
 
 .social-btn a:hover {
-    fill: red;
+    fill: var(--color-red)
 }
 
 /* Pages footer */
@@ -231,7 +247,7 @@ header {
     display: none;
 }
 
-
+/********* MEDIA QUERIES **********/
 
 @media (max-width: 850px) {
 
