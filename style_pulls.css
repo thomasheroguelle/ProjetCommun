@@ -45,6 +45,7 @@
 .tout_les_prdt_de_la_cat {
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .margin_bttm_img {
