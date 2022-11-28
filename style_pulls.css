@@ -21,7 +21,7 @@
     font-size: 12px;
 }
 
-.flex {
+.flex-pull {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,20 +41,9 @@
 }
 
 /* PRODUITS */
-/* ATTENTION PAS RESPONSIVE  */
-.tout_les_prdt_de_la_cat img {
-    /* width: min(281px 100%); */
-    /* min-width: 150px; */
-    /* width: 100%; */
-    /* ? */
-    /* object-fit: cover; */
-    /* height: 431px; */
-    /* width: 281px; */
-}
 
 .tout_les_prdt_de_la_cat {
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 10px;
 }
 
