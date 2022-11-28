@@ -216,12 +216,19 @@ button {
     }
     .carre-femme, .carre-homme {
         width: 100%;
-        background-position: center;
+        background-position: -11px -80px;
     }
+    .carre-femme {
+        background-position: -11px -30px;
+    }
+
     .carre-femme .text-arrow, .carre-homme .text-arrow {
         position: absolute;
         bottom: 22px;
         right: 15px;
+    }
+    .text-arrow {
+        gap: 2px;
     }
 
     /* NOUVEAUTÉ */
@@ -245,7 +252,6 @@ button {
     .promotion {
         grid-column: 1 / span 2;
         grid-row: 3;
-        min-height: 100px;
     }
     .promotion p {
         font-size: 50;
@@ -257,6 +263,12 @@ button {
     /* MEILLEURES VENTES */
     .tri-btn {
         justify-content: center;
+    }
+    .homepage-button {
+        padding: 5px 10px;
+    }
+    .carousel-meilleures-ventes-clothe-slide img {
+        height: 200px;
     }
 
     /* NOS ENGAGEMENTS */
@@ -270,6 +282,7 @@ button {
         width: 80vw;
         text-align: left;
     }
+
 
 
     
