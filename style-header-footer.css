@@ -332,6 +332,12 @@ header {
         grid-row: 2;
         width: 100%;
     }
+    .input-newsletter {
+        border: none;
+        border-bottom: solid var(--color-black) 1px;
+        width: 150px;
+        height: 25px;
+    }
     .social-btn {
         grid-column: 1;
         grid-row: 4;
