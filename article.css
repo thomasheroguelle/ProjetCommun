@@ -1,7 +1,7 @@
 /* GENERAL  */
   .description-produit {
-    width: min(1200px, 100%);
-    margin: 20px auto 100px;
+    width: min(1578px, 100%);
+    margin: 20px auto 0px;
   }
   :root {
     --color-red: #cf3034;
@@ -22,7 +22,7 @@ h2 {
     line-height: 50px;
 }
 .voiraussi {
-    font-size: 45px;
+    font-size: clamp(12px, 3vw, 45px) ;
     font-weight: bold;
     margin: 52px 61px;
 }
@@ -131,12 +131,129 @@ width: 150%;
  {
     opacity: 0.5;
 }
+/* paragrapheResponsive */
+.paragrapheResponsive {
+    display: none;
+    border: 2px solid black;
+    min-width: 100%;
+    min-height: 44px;
+    padding-left: 25px;
+ 
+}
+/* RESPONSIVE BUTTONS */
+.responsive-buttons {
+    max-width: 100%;
+    display: none;
+}
+.responsive-panier {
+    display: flex;
+    min-width: 152px;
+    min-height: 33px;
+    background-color: var(--color-black);
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.responsive-panier a{
+    color: white;
+}   
+.selectTaille {
+    background-color: white;
+} 
+.selectTaille a {
+color: var(--color-black);
+} 
+/* detailsResponsive */
+.detailsResponsive {
+    text-align: center;
+    margin-top: 55px;
+    display: none;
+}
+.detailsResponsive p {
+    text-align: center;
+    margin-top: 46px;
+    font-size: 19px;
+    font-weight: bold;
+}
+.detailsResponsiveDescription p {
+    font-size: 10px;
+}
+.details {
+min-width: 152px;
+min-height: 33px;
+background-color: var(--color-black);
+margin-top: 55px;
 
-
-    
+}
+.details a,
+.details i {
+    color: white;
+}
+.afficherplusResponsive {
+margin-top : 28px;
+} 
 /* RESPONSIVE THOMAS  */
-
-    
+/* @media (max-width: 428px) {  */
+@media (max-width: 1286px) { 
+.section {
+    display: flex;
+    flex-direction: column;
+}
+.flexboxspacebetween {
+    max-width: 100%;   
+    margin: 0 15px;
+}   
+.display-none {
+    display: none;
+}
+.svgXavis {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+}
+.size30bold {
+    margin-top: 0;
+}
+.avis {
+    display: inline;
+    margin-top: 15px;
+}
+button .panier {
+    width: 152px;
+    height: 33px;
+}
+.texte .panier {
+    display: none;
+}
+.responsive-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.PIG {
+    justify-content: space-between;
+}
+.paragrapheResponsive {
+display: flex;
+align-items: center;
+margin-bottom: 25px;
+}
+.detailsResponsive {
+    display: block;
+}
+.voiraussi {
+    display: none;
+}
+.same-height-columns__content {
+    margin-top: 15px;
+    text-align: center;
+}
+.same-height-columns__content .fa-heart{
+    display: none;
+}
+.same-height-columns__column img{
+    min-width: 129px;
+    min-height: 147px;
+}
+}
 
 
     
