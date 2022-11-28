@@ -2,8 +2,13 @@
     padding: 0 60px;
 }
 
+
 #categorie_femme h3 {
+    font-size: clamp(23px, 3vw, 28px);
     color: white;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 5px black;
+    text-align: center;
 }
 
 /* MARGIN between div */
@@ -24,7 +29,8 @@
 /* POLYESTER RECYCLÉ */
 .polyester_recycle {
     height: 460px;
-    background-image: url(images/polyester_recycle.jpeg);
+    /* CHANGEMENT */
+    background-image: url(images/polyester.jpeg);
 }
 
 /* VTMTS HIVER */
@@ -103,4 +109,29 @@
         flex-direction: column;
     }
 
+    .categories_type_insta div {
+        height: 250px;
+    }
+
+}
+
+
+@media (max-width: 730px) {
+    .categories_type_insta div {
+        height: 220px;
+    }
+}
+
+@media (max-width: 440px) {
+
+    .categories_type_insta div {
+        height: 120px;
+    }
+
+    .polyester_recycle,
+    .vtmts_soiree,
+    .vtmts_chauds,
+    .coton_bio {
+        height: 270px;
+    }
 }
